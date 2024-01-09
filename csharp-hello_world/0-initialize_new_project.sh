@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Create a new directory
 mkdir -p 0-new_project
