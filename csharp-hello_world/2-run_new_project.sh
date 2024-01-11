@@ -7,4 +7,4 @@ dotnet new console -o "2-new_project"
 dotnet build "2-new_project"
 
 # Runs dotnet pls
-cd "2-new_project" && dotnet run
+dotnet run --project "2-new_project"
