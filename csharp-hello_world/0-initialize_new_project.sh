@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Create a new directory
+# Creates new directory
 mkdir -p 0-new_project
 
 # Navigates into directory
