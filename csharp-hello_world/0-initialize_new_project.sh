@@ -9,5 +9,5 @@ cd 0-new_project
 # Initializes a new C# project using dotnet
 dotnet new console
 
-# Move back to current directory
+# Move to current directory
 cd ..
