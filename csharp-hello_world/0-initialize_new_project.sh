@@ -8,4 +8,3 @@ cd 0-new_project
 
 # Initializes a new C# project using dotnet
 dotnet new console
-
