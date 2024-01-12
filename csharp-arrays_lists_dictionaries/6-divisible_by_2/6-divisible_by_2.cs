@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class ListUtils
+class List
 {
     public static List<bool> DivisibleBy2(List<int> myList)
     {
-        if (myList == null)
+        if (numbers == null)
         {
-            Console.WriteLine("List is null");
+            Console.WriteLine("Input list is null");
             return null;
         }
 
-        List<bool> result = new List<bool>(myList.Count);
+        List<bool> result = new List<bool>(numbers.Count);
 
-        foreach (int number in myList)
+        foreach (int number in numbers)
         {
             result.Add(number % 2 == 0);
         }
