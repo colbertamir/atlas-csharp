@@ -7,7 +7,7 @@ class Program
         Random rndm = new Random();
         int number = rndm.Next(-10, 10);
 
-        Console.Write($"The number {number} is ");
+        Console.Write($"{number} is ");
 
         if (number > 0)
         {
