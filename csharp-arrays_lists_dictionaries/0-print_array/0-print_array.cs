@@ -17,8 +17,14 @@ class Array
             newArray[i] = i;
         }
 
-        Console.WriteLine(string.Join(", ", newArray) + "$");
-        Console.WriteLine($"Array Length: {size}$");
+        if (size == 0)
+        {
+            Console.WriteLine();
+        }
+        else
+        {
+            Console.WriteLine(string.Join(", ", newArray));
+        }
 
         return newArray;
     }
