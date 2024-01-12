@@ -11,6 +11,11 @@ class Program
 
         Console.Write($"The last digit of {number} is ");
 
+        if (number < 0)
+        {
+            lastDigit *= -1;
+        }
+
         if (lastDigit > 5)
         {
             Console.WriteLine($"{lastDigit} and is greater than 5");
