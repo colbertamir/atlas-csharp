@@ -18,7 +18,7 @@ class List
             newList.Add(i);
         }
 
-        Console.WriteLine(string.Join(", ", newList));
+        Console.WriteLine(string.Join(" ", newList));
         return newList;
     }
 }
