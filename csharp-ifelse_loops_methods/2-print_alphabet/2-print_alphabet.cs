@@ -11,7 +11,6 @@ class Program
             Console.Write(currentChar);
             currentChar++;
         }
-
-        Console.WriteLine();
     }
+
 }
