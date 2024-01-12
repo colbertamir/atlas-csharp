@@ -9,7 +9,7 @@ class Program
 
         int lastDigit = Math.Abs(number % 10);
 
-        Console.Write($"{number} is ");
+        Console.Write($"The last digit of {number} is ");
 
         if (lastDigit > 5)
         {
