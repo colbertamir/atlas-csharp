@@ -23,7 +23,7 @@ class Array
         }
         else
         {
-            Console.WriteLine(string.Join(", ", newArray));
+            Console.WriteLine(string.Join(",", newArray));
         }
 
         return newArray;
