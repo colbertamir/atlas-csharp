@@ -4,17 +4,22 @@ class Array
 {
     public static void Reverse(int[] array)
     {
-        // Check if the array is not null
         if (array == null)
         {
             Console.WriteLine("Array is null");
             return;
         }
 
-        // Reverse the array in-place
-        Array.Reverse(array);
+        for (int i = array.Length - 1; i >= 0; i--)
+        {
+            Console.Write(array[i]);
 
-        // Print the reversed array
-        Console.WriteLine("Reversed Array: " + string.Join(", ", array));
+            if (i > 0)
+            {
+                Console.Write(", ");
+            }
+        }
+
+        Console.WriteLine();
     }
 }
