@@ -26,6 +26,8 @@ class Array
             Console.WriteLine(string.Join(", ", newArray));
         }
 
+        Console.WriteLine($"Array Length: {size}$");
+
         return newArray;
     }
 }
