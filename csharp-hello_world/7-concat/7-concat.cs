@@ -7,6 +7,8 @@ class Program
         string str1 = "Holberton";
         string str2 = "School";
         
-        Console.WriteLine($"Welcome to {str1} {str2}!");
+        Console.Write("Welcome to ");
+        Console.Write($"{str1}!");
+        Console.WriteLine($" {str2}");
     }
 }
