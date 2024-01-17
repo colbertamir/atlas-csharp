@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// <summary>
-/// Represents a abstract base class.
+/// Represents an abstract base class.
 /// </summary>
 public abstract class Base
 {
@@ -11,11 +11,19 @@ public abstract class Base
     public string Name { get; set; }
 
     /// <summary>
-    /// Returns a string representation of object.
+    /// Returns string representation of object.
     /// </summary>
     /// <returns>Formatted string representing the object.</returns>
     public override string ToString()
     {
         return $"{Name} is a {GetType().Name}";
     }
+}
+
+/// <summary>
+/// Represents software engineer.
+/// </summary>
+public class SoftwareEngineer : Base
+{
+    // Additional members specific to SoftwareEngineer class can be added here
 }
