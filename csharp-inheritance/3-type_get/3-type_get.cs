@@ -1,15 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 
-/// <summary>
-/// Supplies utility methods for working with objects.
-/// </summary>
 public class Obj
 {
-    /// <summary>
-    /// Prints the names of available properties and methods of an object.
-    /// </summary>
-    /// <param name="myObj">The object to inspect.</param>
     public static void Print(object myObj)
     {
         if (myObj == null)
@@ -19,19 +13,21 @@ public class Obj
         }
 
         Type objType = myObj.GetType();
-        PropertyInfo[] properties = objType.GetProperties();
-        MethodInfo[] methods = objType.GetMethods();
 
-        Console.WriteLine($"{objType.Name} Properties:");
+        // Filter properties & methods based on specified condition
+        PropertyInfo[] properties = objType.GetProperties().Where(p => p.PropertyType == typeof(int)).ToArray();
+        MethodInfo[] methods = objType.GetMethods().Where(m => m.ReturnType == typeof(int)).ToArray();
+
+        Console.WriteLine("Int32 Properties:");
         foreach (var property in properties)
         {
-            Console.WriteLine($"{property.PropertyType.Name} {property.Name}");
+            Console.WriteLine($"{property.Name}");
         }
 
-        Console.WriteLine($"\n{objType.Name} Methods:");
+        Console.WriteLine("\nInt32 Methods:");
         foreach (var method in methods)
         {
-            Console.WriteLine($"{method.ReturnType.Name} {method.Name}");
+            Console.WriteLine($"{method.Name}");
         }
     }
 }
