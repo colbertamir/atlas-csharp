@@ -28,6 +28,6 @@ struct Dog
     // Overrides ToString method to print Dog object's attributes
     public override string ToString()
     {
-        return $"Dog Name: {name}\nAge: {age} years\nOwner: {owner}\nRating: {rating}";
+        return $"Dog Name: {name}\nAge: {age}\nOwner: {owner}\nRating: {rating}";
     }
 }
