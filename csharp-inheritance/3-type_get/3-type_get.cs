@@ -22,13 +22,13 @@ public class Obj
         PropertyInfo[] properties = objType.GetProperties();
         MethodInfo[] methods = objType.GetMethods();
 
-        Console.WriteLine("Properties:");
+        Console.WriteLine("Int32 Properties:");
         foreach (var property in properties)
         {
             Console.WriteLine($"  {property.Name}");
         }
 
-        Console.WriteLine("\nMethods:");
+        Console.WriteLine("\nInt32 Methods:");
         foreach (var method in methods)
         {
             Console.WriteLine($"  {method.Name}");
