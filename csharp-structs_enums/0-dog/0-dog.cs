@@ -8,7 +8,7 @@ enum Rating
     Excellent
 }
 
-class Program
+class Dog
 {
     static void Main(string[] args)
     {
