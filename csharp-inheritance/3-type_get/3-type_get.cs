@@ -25,13 +25,13 @@ public class Obj
         Console.WriteLine("Int32 Properties:");
         foreach (var property in properties)
         {
-            Console.WriteLine($"  {property.Name}");
+            Console.WriteLine($" {property.Name}");
         }
 
         Console.WriteLine("\nInt32 Methods:");
         foreach (var method in methods)
         {
-            Console.WriteLine($"  {method.Name}");
+            Console.WriteLine($" {method.Name}");
         }
     }
 }
