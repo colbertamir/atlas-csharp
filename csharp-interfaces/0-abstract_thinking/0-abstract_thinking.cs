@@ -13,7 +13,7 @@ public abstract class Base
     /// <summary>
     /// Returns string representation of object.
     /// </summary>
-    /// <returns>Formatted string representing the object.</returns>
+    /// <returns>Formatted string representing object.</returns>
     public override string ToString()
     {
         return $"{Name} is a {GetType().Name}";
@@ -25,5 +25,5 @@ public abstract class Base
 /// </summary>
 public class SoftwareEngineer : Base
 {
-    // Additional members specific to SoftwareEngineer class can be added here
+    // Additional members for SoftwareEngineer class can be added here
 }
