@@ -221,7 +221,7 @@ public class Door : Base, IInteractive
 public class RoomObjects
 {
     /// <summary>
-    /// Iterates through a list of objects & executes methods depending on the specified interface type.
+    /// Iterates through a list of objects and executes methods depending on the interface type.
     /// </summary>
     /// <param name="roomObjects">List of room objects.</param>
     /// <param name="type">Type of interface to be considered (e.g., typeof(IInteractive)).</param>
