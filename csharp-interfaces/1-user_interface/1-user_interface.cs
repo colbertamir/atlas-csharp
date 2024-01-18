@@ -64,7 +64,7 @@ public abstract class Base
 }
 
 /// <summary>
-/// Represents a class that inherits from Base & implements IInteractive, IBreakable, & ICollectable.
+/// Represents a class that inherits from Base and implements IInteractive, IBreakable, and ICollectable.
 /// </summary>
 public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
