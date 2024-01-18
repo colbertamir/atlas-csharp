@@ -5,6 +5,9 @@
 /// </summary>
 public interface IInteractive
 {
+    /// <summary>
+    /// Performs an interaction with the object.
+    /// </summary>
     void Interact();
 }
 
@@ -13,7 +16,14 @@ public interface IInteractive
 /// </summary>
 public interface IBreakable
 {
+    /// <summary>
+    /// Gets or sets the durability of the object.
+    /// </summary>
     int durability { get; set; }
+
+    /// <summary>
+    /// Breaks the object.
+    /// </summary>
     void Break();
 }
 
@@ -22,7 +32,14 @@ public interface IBreakable
 /// </summary>
 public interface ICollectable
 {
+    /// <summary>
+    /// Gets or sets whether the object has been collected.
+    /// </summary>
     bool isCollected { get; set; }
+
+    /// <summary>
+    /// Collects the object.
+    /// </summary>
     void Collect();
 }
 
@@ -47,25 +64,42 @@ public abstract class Base
 }
 
 /// <summary>
-/// Represents a class that inherits from Base and implements IInteractive, IBreakable, and ICollectable.
+/// Represents a class that inherits from Base & implements IInteractive, IBreakable, & ICollectable.
 /// </summary>
 public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
-    // Implementation of IInteractive interface
+    // Implementation of IInteractive
+    /// <summary>
+    /// Performs an interaction with the object.
+    /// </summary>
     public void Interact()
     {
         // Implementation goes here
     }
 
-    // Implementation of IBreakable interface
+    // Implementation of IBreakable
+    /// <summary>
+    /// Gets or sets the durability of the object.
+    /// </summary>
     public int durability { get; set; }
+
+    /// <summary>
+    /// Breaks object.
+    /// </summary>
     public void Break()
     {
         // Implementation goes here
     }
 
-    // Implementation of ICollectable interface
+    // Implementation of ICollectable
+    /// <summary>
+    /// Gets or sets whether the object has been collected.
+    /// </summary>
     public bool isCollected { get; set; }
+
+    /// <summary>
+    /// Collects object.
+    /// </summary>
     public void Collect()
     {
         // Implementation goes here
