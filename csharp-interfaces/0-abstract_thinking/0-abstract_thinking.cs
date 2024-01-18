@@ -14,8 +14,8 @@ public abstract class Base
     /// Returns string representation of the object.
     /// </summary>
     /// <returns>A formatted string representing the object.</returns>
-     public override string ToString()
+    public override string ToString()
     {
-        return string.Format("{0} is a {1}", Name, GetType().Name);
+        return $"{name} is a {this.GetType()}";
     }
 }
