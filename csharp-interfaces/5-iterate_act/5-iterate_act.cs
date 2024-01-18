@@ -231,7 +231,7 @@ public class RoomObjects
         {
             if (type.IsAssignableFrom(obj.GetType()))
             {
-                // Checks if the object implements the specified interface
+                // Checks if object implements the specified interface
                 if (type == typeof(IInteractive))
                 {
                     // Execute Interact() method
