@@ -5,17 +5,18 @@ class List
 {
     public static List<bool> DivisibleBy2(List<int> myList)
     {
-        if (numbers == null)
-        {
-            Console.WriteLine("Input list is null");
-            return null;
-        }
+        List<bool>result = new List<bool>();
 
-        List<bool> result = new List<bool>(numbers.Count);
-
-        foreach (int number in numbers)
+        foreach (int number in myList)
         {
-            result.Add(number % 2 == 0);
+            if (number % 2 == 0)
+            {
+                result.Add(true);
+            }
+            else
+            {
+                result.Add(false);
+            }
         }
 
         return result;
