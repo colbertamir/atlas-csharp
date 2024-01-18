@@ -191,6 +191,31 @@ public class Key : Base, ICollectable
 }
 
 /// <summary>
+/// Represents a class that inherits from Base, IInteractive.
+/// </summary>
+public class Door : Base, IInteractive
+{
+    /// <summary>
+    /// Initializes a new instance of the Door class.
+    /// If name isn't provided, the default value is set to Door.
+    /// </summary>
+    /// <param name="name">The name of the door.</param>
+    public Door(string name = "Door")
+    {
+        this.name = name;
+    }
+
+    // Implementation of IInteractive
+    /// <summary>
+    /// Performs interaction with the door.
+    /// </summary>
+    public void Interact()
+    {
+        Console.WriteLine($"You interact with the {name}. It's a door.");
+    }
+}
+
+/// <summary>
 /// Represents a class for handling room objects.
 /// </summary>
 public class RoomObjects
