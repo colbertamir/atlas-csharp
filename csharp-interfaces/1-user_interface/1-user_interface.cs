@@ -51,7 +51,7 @@ public abstract class Base
     /// <summary>
     /// Gets or sets the name of the object.
     /// </summary>
-    public string name;
+    public string name { get; set; };
 
     /// <summary>
     /// Returns a string representation of the object.
