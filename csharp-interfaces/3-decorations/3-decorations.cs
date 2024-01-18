@@ -52,6 +52,8 @@ public abstract class Base
 /// </summary>
 public class Decoration : Base, IInteractive, IBreakable
 {
+    private int _durability; // Private field to store the durability value
+
     /// <summary>
     /// Initializes a new instance of the Decoration class.
     /// If name isn't provided, the default value is set to Decoration.
@@ -69,7 +71,7 @@ public class Decoration : Base, IInteractive, IBreakable
         }
 
         this.name = name;
-        this.durability = durability;
+        this._durability = durability; // Initialize the private field
         this.isQuestItem = isQuestItem;
     }
 
@@ -79,7 +81,7 @@ public class Decoration : Base, IInteractive, IBreakable
     /// </summary>
     public void Interact()
     {
-        if (durability <= 0)
+        if (_durability <= 0)
         {
             Console.WriteLine($"The {name} has been broken.");
         }
@@ -95,17 +97,26 @@ public class Decoration : Base, IInteractive, IBreakable
 
     // Implementation of IBreakable
     /// <summary>
+    /// Gets or sets the durability of the decoration.
+    /// </summary>
+    public int durability
+    {
+        get { return _durability; }
+        set { _durability = value; }
+    }
+
+    /// <summary>
     /// Breaks the decoration.
     /// </summary>
     public void Break()
     {
-        durability--;
+        _durability--;
 
-        if (durability > 0)
+        if (_durability > 0)
         {
             Console.WriteLine($"You hit the {name}. It cracks.");
         }
-        else if (durability == 0)
+        else if (_durability == 0)
         {
             Console.WriteLine($"You smash the {name}. What a mess.");
         }
