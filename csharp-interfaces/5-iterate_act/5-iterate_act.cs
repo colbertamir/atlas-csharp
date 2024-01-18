@@ -211,7 +211,7 @@ public class Door : Base, IInteractive
     /// </summary>
     public void Interact()
     {
-        Console.WriteLine($"You interact with the {name}. It's a door.");
+        Console.WriteLine($"You interact with the {name}. It's locked.");
     }
 }
 
