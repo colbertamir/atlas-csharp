@@ -8,7 +8,7 @@ public abstract class Base
     /// <summary>
     /// Gets or sets the name of object.
     /// </summary>
-    public string Name { get; set; }
+    public string name { get; set; }
 
     /// <summary>
     /// Returns string representation of the object.
@@ -16,14 +16,6 @@ public abstract class Base
     /// <returns>A formatted string representing the object.</returns>
     public override string ToString()
     {
-        return $"{Name} is a {GetType().Name}";
-    }
-    
-    /// <summary>
-    /// Represents a software engineer.
-    /// </summary>
-    public class SoftwareEngineer : Base
-    {
-    // Additional members specific to SoftwareEngineer class can be added here
+        return $"{name} is a {GetType().name}";
     }
 }
