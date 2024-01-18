@@ -18,4 +18,12 @@ public abstract class Base
     {
         return $"{Name} is a {GetType().Name}";
     }
+    
+    /// <summary>
+    /// Represents a software engineer.
+    /// </summary>
+    public class SoftwareEngineer : Base
+    {
+    // Additional members specific to SoftwareEngineer class can be added here
+    }
 }
