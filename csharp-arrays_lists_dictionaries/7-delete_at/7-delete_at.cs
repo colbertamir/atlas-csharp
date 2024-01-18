@@ -17,7 +17,7 @@ class List
             return myList;
         }
 
-        List<int> updatedList = new List<int>(myList.Count - 1);
+        List<int> updatedList = new List<int>();
 
         for (int i = 0; i < myList.Count; i++)
         {
