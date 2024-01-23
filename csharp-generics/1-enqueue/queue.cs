@@ -12,12 +12,12 @@ public class Queue<T>
         /// <summary>
         /// Gets or sets the value of the node.
         /// </summary>
-        public T value { get; set; } = default(T);
+        public T Value { get; set; } = default(T);
 
         /// <summary>
         /// Gets or sets the next node in the queue.
         /// </summary>
-        public Node next { get; set; } = null;
+        public Node Next { get; set; } = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Node"/> class.
@@ -25,25 +25,25 @@ public class Queue<T>
         /// <param name="value">The initial value of the node.</param>
         public Node(T value)
         {
-            value = value;
-            next = null;
+            Value = value;
+            Next = null;
         }
     }
 
     /// <summary>
     /// Gets or sets the head node of the queue.
     /// </summary>
-    public Node head { get; set; } = null;
+    public Node Head { get; set; } = null;
 
     /// <summary>
     /// Gets or sets the tail node of the queue.
     /// </summary>
-    public Node tail { get; set; } = null;
+    public Node Tail { get; set; } = null;
 
     /// <summary>
-    /// Gets or sets the count of elements in the queue.
+    /// Gets or sets count of elements in the queue.
     /// </summary>
-    public int count { get; private set; } = 0;
+    public int Count { get; private set; } = 0;
 
     /// <summary>
     /// Checks the type of the queue.
@@ -55,35 +55,35 @@ public class Queue<T>
     }
 
     /// <summary>
-    /// Adds a new node to the end of the queue.
+    /// Adds new node to the end of the queue.
     /// </summary>
     /// <param name="value">The value to be added to the queue.</param>
     public void Enqueue(T value)
     {
         Node newNode = new Node(value);
 
-        if (head == null)
+        if (Head == null)
         {
             // If the queue is empty, the new node becomes both the head and tail
-            head = newNode;
-            tail = newNode;
+            Head = newNode;
+            Tail = newNode;
         }
         else
         {
             // Otherwise, add the new node to the end of the queue
-            tail.next = newNode;
-            tail = newNode;
+            Tail.Next = newNode;
+            Tail = newNode;
         }
 
         // Increment the count
-        count++;
+        Count++;
     }
 
     /// <summary>
-    /// Returns the number of nodes in the queue.
+    /// Returns number of nodes in the queue.
     /// </summary>
     /// <returns>The count of nodes in the queue.</returns>
-    public int Count()
+    public int GetCount()
     {
         return Count;
     }
