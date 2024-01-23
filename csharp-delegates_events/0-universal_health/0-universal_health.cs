@@ -28,7 +28,7 @@ public class Player
     public Player(string name, float maxHp)
     {
         // Assign parameters to properties accordingly
-        Name = name ?? ;
+        Name = name ?? "Player"; // Default name: Player
         MaxHp = maxHp > 0 ? maxHp : 100f; // Default maxHp: 100f
 
         if (maxHp <= 0)
