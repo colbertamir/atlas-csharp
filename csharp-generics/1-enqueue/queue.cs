@@ -20,7 +20,7 @@ public class Queue<T>
         public Node Next { get; set; } = null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Node"/> class.
+        /// Initializes new instance of the <see cref="Node"/> class.
         /// </summary>
         /// <param name="value">The initial value of the node.</param>
         public Node(T value)
