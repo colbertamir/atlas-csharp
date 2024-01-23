@@ -43,7 +43,7 @@ public class Queue<T>
     /// <summary>
     /// Gets or sets count of elements in the queue.
     /// </summary>
-    public int Count { get; private set; } = 0;
+    public int GetCount { get; private set; } = 0;
 
     /// <summary>
     /// Checks the type of the queue.
