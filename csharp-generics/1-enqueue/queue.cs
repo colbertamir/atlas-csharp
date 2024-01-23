@@ -41,6 +41,11 @@ public class Queue<T>
     public Node Tail { get; set; } = null;
 
     /// <summary>
+    /// Gets or sets count of elements in the queue.
+    /// </summary>
+    public int Count { get; set; } = 0;
+
+    /// <summary>
     /// Checks the type of the queue.
     /// </summary>
     /// <returns>A string representing the type of the queue.</returns>
