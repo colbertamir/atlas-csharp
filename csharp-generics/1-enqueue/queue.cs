@@ -76,7 +76,7 @@ public class Queue<T>
         }
 
         // Increment the count
-        count++;
+        Count++;
     }
 
     /// <summary>
