@@ -83,7 +83,7 @@ public class Queue<T>
     /// Returns number of nodes in the queue.
     /// </summary>
     /// <returns>The count of nodes in the queue.</returns>
-    public int GetCount()
+    public int Count()
     {
         return Count;
     }
