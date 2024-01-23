@@ -2,6 +2,6 @@
 {
      public string CheckType()
     {
-        return $"Queue<{typeof(T).Name}>";
+        return $"System{typeof(T).Name}";
     }
 }
