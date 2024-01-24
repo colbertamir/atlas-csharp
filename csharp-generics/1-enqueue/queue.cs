@@ -2,7 +2,7 @@
 /// Represents a generic queue data structure.
 /// </summary>
 /// <typeparam name="T">The type of elements stored in the queue.</typeparam>
-public class Queue<T> where T : struct
+public class Queue<T>
 {
     /// <summary>
     /// Represents a node in the queue.
@@ -65,16 +65,16 @@ public class Queue<T> where T : struct
     {
         Node newNode = new Node(value);
 
-        if (head == null)
+        // Otherwise, add the new node to the end of the queue
+        if (tail != null)
         {
-            // If the queue is empty, the new node becomes both the head and tail
-            head = newNode;
+            tail.next = newNode;
             tail = newNode;
         }
         else
         {
-            // Otherwise, add the new node to the end of the queue
-            tail!.next = newNode;
+            // Handle the case where tail is null
+            head = newNode;
             tail = newNode;
         }
 
