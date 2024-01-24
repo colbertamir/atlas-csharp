@@ -40,9 +40,9 @@
     /// Returns the number of nodes in the queue.
     /// </summary>
     /// <returns>The number of nodes in the queue.</returns>
-    public int Count()
+    public int Count
     {
-        return count;
+        get { return count; }
     }
 
     private int count = 0;
