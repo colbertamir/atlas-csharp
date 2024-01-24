@@ -8,7 +8,7 @@
         /// <summary>
         /// Gets or sets the value of the node.
         /// </summary>
-        public T value { get; set; } = default!;
+        public T value { get; set; } = default;
 
         /// <summary>
         /// Gets or sets the next node in the queue.
@@ -73,7 +73,7 @@
         else
         {
             // Otherwise, add the new node to the end of the queue
-            tail!.next = newNode;
+            tail.next = newNode;
             tail = newNode;
         }
 
