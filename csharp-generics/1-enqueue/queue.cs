@@ -2,7 +2,7 @@
 /// Represents a generic queue data structure.
 /// </summary>
 /// <typeparam name="T">The type of elements stored in the queue.</typeparam>
-public class Queue<T>
+public class Queue<T> where T : struct
 {
     /// <summary>
     /// Represents a node in the queue.
@@ -12,7 +12,7 @@ public class Queue<T>
         /// <summary>
         /// Gets or sets the value of the node.
         /// </summary>
-        public T? value { get; set; }
+        public T value { get; set; }
 
         /// <summary>
         /// Gets or sets the next node in the queue.
@@ -25,12 +25,7 @@ public class Queue<T>
         /// <param name="value">The initial value of the node.</param>
         public Node(T value)
         {
-            // Handle default value logic inside the constructor
             this.value = value;
-            if (value == null)
-            {
-                this.value = default;
-            }
             next = null;
         }
     }
@@ -79,7 +74,7 @@ public class Queue<T>
         else
         {
             // Otherwise, add the new node to the end of the queue
-            tail.next = newNode;
+            tail!.next = newNode;
             tail = newNode;
         }
 
