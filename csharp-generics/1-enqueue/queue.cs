@@ -74,7 +74,7 @@ public class Queue<T> where T : struct
         else
         {
             // Otherwise, add the new node to the end of the queue
-            tail.next = newNode;
+            tail!.next = newNode;
             tail = newNode;
         }
 
