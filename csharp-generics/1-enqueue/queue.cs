@@ -26,7 +26,11 @@ public class Queue<T>
         public Node(T value)
         {
             // Handle default value logic inside the constructor
-            this.value = value == null ? default : value;
+            this.value = value;
+            if (value == null)
+            {
+                this.value = default;
+            }
             next = null;
         }
     }
