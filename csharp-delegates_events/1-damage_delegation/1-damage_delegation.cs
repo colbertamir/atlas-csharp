@@ -82,7 +82,7 @@ public class Player
     }
 
     /// <summary>
-    /// Heals the player's health.
+    /// Heals player's health.
     /// </summary>
     /// <param name="heal">The amount of health to be healed.</param>
     public void HealDamage(float heal)
