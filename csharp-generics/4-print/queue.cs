@@ -115,16 +115,16 @@ public class Queue<T>
     }
 
     /// <summary>
-    /// Prints the queue, starting from the head.
+    /// Prints the queue.
     /// </summary>
-    public void Print()
+    /// <param name="printAction">Delegate for printing each element.</param>
+    public void Print(Action<T> printAction)
     {
         Node current = head;
         while (current != null)
         {
-            Console.Write($"{current.value} ");
+            printAction(current.value);
             current = current.next;
         }
-        Console.WriteLine();
     }
 }
