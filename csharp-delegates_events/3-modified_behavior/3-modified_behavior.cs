@@ -60,9 +60,9 @@ public class Player
     public void PrintHealth()
     {
         // Check if name is not null or empty before printing
-        string playerName = string.IsNullOrEmpty(name) ? "Player" : name;
+        string playerName = string.IsNullOrEmpty(this.name) ? "Player" : this.name;
 
-        Console.WriteLine($"{playerName} has {hp} / {maxHp} health");
+        Console.WriteLine($"{playerName} has {this.hp} / {this.maxHp} health");
     }
 
     /// <summary>
@@ -80,9 +80,9 @@ public class Player
         // Ensure damage is not negative
         float actualDamage = Math.Max(0, damage);
 
-        Console.WriteLine($"{name} takes {actualDamage} damage!");
+        Console.WriteLine($"{this.name} takes {actualDamage} damage!");
         // Calculate new value of hp without setting it here
-        ValidateHP(hp - actualDamage);
+        ValidateHP(ApplyModifier(this.hp, Modifier.Weak));
     }
 
     /// <summary>
@@ -94,9 +94,9 @@ public class Player
         // Ensure heal is not negative
         float actualHeal = Math.Max(0, heal);
 
-        Console.WriteLine($"{name} heals {actualHeal} HP!");
+        Console.WriteLine($"{this.name} heals {actualHeal} HP!");
         // Calculate new value of hp without setting it here
-        ValidateHP(hp + actualHeal);
+        ValidateHP(ApplyModifier(this.hp, Modifier.Weak));
     }
 
     /// <summary>
@@ -106,7 +106,7 @@ public class Player
     public void ValidateHP(float newHp)
     {
         // Set hp based on validation criteria
-        hp = newHp < 0 ? 0 : (newHp > maxHp ? maxHp : newHp);
+        this.hp = newHp < 0 ? 0 : (newHp > this.maxHp ? this.maxHp : newHp);
     }
 
     /// <summary>
@@ -115,7 +115,7 @@ public class Player
     /// <param name="baseValue">The base value to apply the modifier to.</param>
     /// <param name="modifier">The modifier to apply.</param>
     /// <returns>The modified value.</returns>
-    public static float ApplyModifier(float baseValue, Modifier modifier)
+    public float ApplyModifier(float baseValue, Modifier modifier)
     {
         switch (modifier)
         {
