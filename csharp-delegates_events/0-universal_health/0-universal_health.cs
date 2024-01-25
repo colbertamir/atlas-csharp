@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿using System;
+
+/// <summary>
 /// Represents a player with health-related properties and methods.
 /// </summary>
 public class Player
