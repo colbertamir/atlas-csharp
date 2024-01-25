@@ -86,7 +86,7 @@ public class Queue<T>
     /// Removes the first node in the queue and returns its value.
     /// If the queue is empty, invokes the provided action to write the message.
     /// </summary>
-    public T Dequeue(Action<string> writeToConsole)
+    public T Dequeue(System.Action<string> writeToConsole)
     {
         if (head != null)
         {
