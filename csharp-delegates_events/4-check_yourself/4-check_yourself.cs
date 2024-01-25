@@ -5,8 +5,15 @@
 /// </summary>
 public class CurrentHPArgs : EventArgs
 {
+    /// <summary>
+    /// Gets the current health points.
+    /// </summary>
     public float CurrentHp { get; }
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CurrentHPArgs"/> class.
+    /// </summary>
+    /// <param name="newHp">The new health points.</param>
     public CurrentHPArgs(float newHp)
     {
         CurrentHp = newHp;
