@@ -96,7 +96,7 @@ public class Player
 
         Console.WriteLine($"{this.name} heals {actualHeal} HP!");
         // Calculate new value of hp without setting it here
-        ValidateHP(ApplyModifier(this.hp, Modifier.Strong));
+        ValidateHP(ApplyModifier(this.hp, Modifier.Weak));
     }
 
     /// <summary>
