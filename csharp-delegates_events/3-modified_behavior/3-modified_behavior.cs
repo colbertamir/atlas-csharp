@@ -122,7 +122,7 @@ public class Player
         switch (modifier)
         {
             case Modifier.Weak:
-                modifiedValue *= 0.5;
+                modifiedValue *= 0.5f;
                 break;
             case Modifier.Strong:
                 modifiedValue *= 1.5f;
