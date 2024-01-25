@@ -17,7 +17,7 @@ public class Queue<T> where T : struct
         /// <summary>
         /// Gets or sets the next node in the queue.
         /// </summary>
-        public Node? next { get; set; } = null;
+        public Node next { get; set; } = null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Node"/> class.
@@ -33,12 +33,12 @@ public class Queue<T> where T : struct
     /// <summary>
     /// Gets or sets the head node of the queue.
     /// </summary>
-    public Node? head { get; set; } = null;
+    public Node head { get; set; } = null;
 
     /// <summary>
     /// Gets or sets the tail node of the queue.
     /// </summary>
-    public Node? tail { get; set; } = null;
+    public Node tail { get; set; } = null;
 
     /// <summary>
     /// Returns the number of nodes in the queue.
