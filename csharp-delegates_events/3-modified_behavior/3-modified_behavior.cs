@@ -117,22 +117,22 @@ public class Player
     /// <returns>The modified value.</returns>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
-        if (modifier == Modifier.Weak)
+        float modifiedValue = baseValue; // Initialize with the base value
+
+        switch (modifier)
         {
-            return baseValue / 2;
+            case Modifier.Weak:
+                modifiedValue /= 2;
+                break;
+            case Modifier.Strong:
+                modifiedValue *= 1.5f;
+                break;
+            // No action needed for Modifier.Base, as it stays the same
+            default:
+                break;
         }
-        else if (modifier == Modifier.Base)
-        {
-            return baseValue;
-        }
-        else if (modifier == Modifier.Strong)
-        {
-            return baseValue * 1.5f;
-        }
-        else
-        {
-            return baseValue;
-        }
+
+        return modifiedValue;
     }
 
     // Private fields
