@@ -54,7 +54,7 @@ public class Queue<T>
     /// <returns>A string representing the type of the queue.</returns>
     public string CheckType()
     {
-        return $"System.{typeof(T).Name}";
+        return $"{typeof(T).Name}";
     }
 
     /// <summary>
@@ -84,9 +84,9 @@ public class Queue<T>
 
     /// <summary>
     /// Removes the first node in the queue and returns its value.
-    /// If the queue is empty, writes "Queue is empty" to the console and returns the default value of the parameter’s type.
+    /// If the queue is empty, invokes the provided action to write the message.
     /// </summary>
-    public T Dequeue()
+    public T Dequeue(Action<string> writeToConsole)
     {
         if (head != null)
         {
@@ -100,7 +100,7 @@ public class Queue<T>
         }
         else
         {
-            Console.WriteLine("Queue is empty");
+            writeToConsole("Queue is empty");
             return default(T);
         }
     }
