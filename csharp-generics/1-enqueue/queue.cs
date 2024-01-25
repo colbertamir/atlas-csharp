@@ -12,7 +12,7 @@ public class Queue<T> where T : struct
         /// <summary>
         /// Gets or sets the value of the node.
         /// </summary>
-        public T value { get; set; } = null; // Use null-forgiving operator
+        public T value { get; set; } = default(T); // Use default(T) instead of null
 
         /// <summary>
         /// Gets or sets the next node in the queue.
