@@ -1,5 +1,15 @@
-﻿public class MatrixMath
+﻿/// <summary>
+/// A class containing methods for matrix operations.
+/// </summary>
+public class MatrixMath
 {
+    /// <summary>
+    /// Calculates the determinant of a 2D or 3D matrix.
+    /// </summary>
+    /// <param name="matrix">The input matrix.</param>
+    /// <returns>
+    /// The determinant of the matrix. If the matrix is not 2D or 3D, returns -1.
+    /// </returns>
     public static double Determinant(double[,] matrix)
     {
         // Check if the matrix is square (i.e., number of rows equals number of columns)
