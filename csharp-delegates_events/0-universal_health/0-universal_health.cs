@@ -59,7 +59,10 @@ public class Player
     /// </summary>
     public void PrintHealth()
     {
-        Console.WriteLine($"{name} has {hp} / {maxHp} health");
+        // Check if name is not null or empty before printing
+        string playerName = string.IsNullOrEmpty(name) ? "Player" : name;
+
+        Console.WriteLine($"{playerName} has {hp} / {maxHp} health");
     }
 
     // Private fields
