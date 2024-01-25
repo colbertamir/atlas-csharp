@@ -1,6 +1,4 @@
-﻿using System;
-
-/// <summary>
+﻿/// <summary>
 /// Represents a generic queue data structure.
 /// </summary>
 /// <typeparam name="T">The type of elements stored in the queue.</typeparam>
@@ -117,16 +115,15 @@ public class Queue<T>
     }
 
     /// <summary>
-    /// Prints the queue, starting from the head.
+    /// Prints the queue.
     /// </summary>
     public void Print()
     {
         Node current = head;
         while (current != null)
         {
-            Console.Write($"{current.value} ");
+            Console.WriteLine(current.value);
             current = current.next;
         }
-        Console.WriteLine();
     }
 }
