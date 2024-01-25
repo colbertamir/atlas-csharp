@@ -115,16 +115,23 @@ public class Queue<T>
     }
 
     /// <summary>
-    /// Prints the queue.
+    /// Returns the queue as a string.
     /// </summary>
-    /// <param name="printAction">Delegate for printing each element.</param>
-    public void Print(Action<T> printAction)
+    /// <returns>A string representation of the queue.</returns>
+    public string Print()
     {
         Node current = head;
+        StringBuilder result = new StringBuilder();
+
         while (current != null)
         {
-            printAction(current.value);
+            result.Append(current.value.ToString());
+            result.Append(" -> ");
             current = current.next;
         }
+
+        result.Append("null");
+
+        return result.ToString();
     }
 }
