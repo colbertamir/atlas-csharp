@@ -65,7 +65,10 @@ public class Player
         Console.WriteLine($"{playerName} has {hp} / {maxHp} health");
     }
 
-    // Delegate for calculating health
+    /// <summary>
+    /// Delegate for calculating health.
+    /// </summary>
+    /// <param name="amount">The amount to calculate health.</param>
     public delegate void CalculateHealth(float amount);
 
     /// <summary>
