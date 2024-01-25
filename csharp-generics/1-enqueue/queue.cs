@@ -12,7 +12,7 @@ public class Queue<T> where T : class
         /// <summary>
         /// Gets or sets the value of the node.
         /// </summary>
-        public T value { get; set; }
+        public T value { get; set; } = default!; // Set to default non-nullable value
 
         /// <summary>
         /// Gets or sets the next node in the queue.
