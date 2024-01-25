@@ -2,7 +2,7 @@
 /// Represents a generic queue data structure.
 /// </summary>
 /// <typeparam name="T">The type of elements stored in the queue.</typeparam>
-public class Queue<T> where T : class
+public class Queue<T> where T : struct
 {
     /// <summary>
     /// Represents a node in the queue.
